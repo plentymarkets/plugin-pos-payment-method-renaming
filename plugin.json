@@ -1,0 +1,28 @@
+{
+  "name"                  : "PaymentCard",
+  "author"                : "plentysystems AG",
+  "version"               : "1.0.0",
+  "license"               : "",
+  "marketplaceName"       : {"en":"Payment card", "de":"Kartenzahlung"},
+  "description"           : "",
+  "namespace"             : "PaymentCard",
+  "type"                  : "payment",
+  "isClosedSource"        : true,
+  "categories"            : ["3588"],
+  "pluginIcon"            : "icon_plugin_md.png",
+  "price"                 : 0.00,
+  "shortDescription"      : {"de":"Das offizielle Kartenzahlung Plugin für plentymarkets", "en":"The official payment card plugin for plentymarkets"},
+  "keywords"              : ["plugin", "payment", "card", "POS"],
+  "authorIcon"            : "plentymarkets_logo.png",
+  "email"                 : "sales@plentymarkets.com",
+  "phone"                 : "+49 561 98 681 100",
+  "serviceProvider"       : "PaymentCard\\Providers\\PaymentCardServiceProvider",
+  "runOnBuild": [
+    "PaymentCard\\Migrations\\CreatePaymentCardPaymentMethod"
+  ],
+
+  "dataProviders": [
+
+  ]
+
+}
