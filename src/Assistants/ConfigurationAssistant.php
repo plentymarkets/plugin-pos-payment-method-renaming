@@ -3,6 +3,8 @@
 namespace PaymentCard\Assistants;
 
 use PaymentCard\Assistants\DataSources\AssistantDataSource;
+use PaymentCard\Assistants\Handlers\PaymentCardSettingsHandler;
+use Plenty\Modules\Otto\Item\Assistants\Categories\CategoryHandler;
 use Plenty\Modules\Wizard\Services\WizardProvider as AssistantProvider;
 use Plenty\Plugin\Translation\Translator;
 
@@ -25,6 +27,7 @@ class ConfigurationAssistant extends AssistantProvider
             'translationNamespace' => 'PaymentCard',
             'title' => 'Assistant.title',
             'createOptionIdTitle' => 'Assistant.createOptionIdTitle',
+            'settingsHandlerClass' => PaymentCardSettingsHandler::class,
             'dataSource' => AssistantDataSource::class,
             'topics' => ['payment'],
             'keywords' => ['PaymentCard,Kartenzahlung'],
@@ -49,7 +52,7 @@ class ConfigurationAssistant extends AssistantProvider
                                         'name' => 'Assistant.input.paymentMethodNameEN',
                                     ]
                                 ]
-                            ],
+                            ]
                         ]
                     ]
                 ]

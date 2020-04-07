@@ -41,4 +41,33 @@ class AssistantDataSource extends BaseWizardDataSource
         $config->set('PaymentCard.paymentCard.nameDE', 'Kartenzahlung');
         $config->set('PaymentCard.paymentCard.nameEN', 'Payment Card');
     }
+
+    /**
+     * @return array
+     */
+    public function get()
+    {
+        $wizardData = $this->dataStructure;
+        /** @var ConfigRepository $config */
+        $config = pluginApp(ConfigRepository::class);
+        $mopNames = [];
+        $mopNames['paymentMethodNameDE'] = $config->get('PaymentCard.paymentCard.nameDE');
+        $mopNames['paymentMethodNameEN'] = $config->get('PaymentCard.paymentCard.nameEN');
+        $wizardData['data'] = $mopNames;
+
+        return $wizardData;
+    }
+
+    /**
+     * @param string $optionId
+     *
+     * @return array|void
+     * @throws \Exception
+     */
+    public function getByOptionId(string $optionId = 'default')
+    {
+        $data = $this->get();
+        return $data;
+    }
+
 }
