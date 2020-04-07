@@ -27,6 +27,7 @@ class ConfigurationAssistant extends AssistantProvider
             'createOptionIdTitle' => 'Assistant.createOptionIdTitle',
             'dataSource' => AssistantDataSource::class,
             'topics' => ['payment'],
+            'keywords' => ['PaymentCard,Kartenzahlung'],
             'shortDescription' => 'Assistant.shortDescription',
             'steps' => [
                 'step0' => [
