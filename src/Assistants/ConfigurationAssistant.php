@@ -30,8 +30,10 @@ class ConfigurationAssistant extends AssistantProvider
             'keywords' => ['PaymentCard,Kartenzahlung'],
             'shortDescription' => 'Assistant.shortDescription',
             'steps' => [
-                'step0' => [
-                    'title' => 'Assistant.titleStep0',
+                'step1' => [
+                    'title' => 'Assistant.titleStep1',
+                    'description' => 'Assistant.descriptionStep1',
+                    'showFullDescription' => true,
                     'sections' => [
                         [
                             'form' => [
@@ -39,6 +41,12 @@ class ConfigurationAssistant extends AssistantProvider
                                     'type' => 'text',
                                     'options' => [
                                         'name' => 'Assistant.input.paymentMethodNameDE',
+                                    ]
+                                ],
+                                'paymentMethodNameEN' => [
+                                    'type' => 'text',
+                                    'options' => [
+                                        'name' => 'Assistant.input.paymentMethodNameEN',
                                     ]
                                 ]
                             ],
