@@ -3,7 +3,7 @@
 namespace PaymentCard\Methods;
 
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodService;
-use Plenty\Plugin\Translation\Translator;
+use Plenty\Plugin\ConfigRepository;
 
 /**
  * Class PaymentCardPaymentMethod
@@ -11,9 +11,14 @@ use Plenty\Plugin\Translation\Translator;
  */
 class PaymentCardPaymentMethod extends PaymentMethodService
 {
+    /**
+     * @var ConfigRepository
+     */
+    private $config;
 
-    public function __construct()
+    public function __construct(ConfigRepository $configRepository)
     {
+        $this->config = $configRepository;
     }
 
 
@@ -33,9 +38,13 @@ class PaymentCardPaymentMethod extends PaymentMethodService
      */
     public function getName($lang = 'de')
     {
-        /** @var Translator $translator */
-        $translator = pluginApp(Translator::class);
-        return $translator->trans('PaymentCard::PaymentMethod.paymentMethodName',[],$lang);
+        $paymentMethodName = '';
+        if($lang == 'de'){
+            $paymentMethodName = $this->config->get('PaymentCard.paymentCard.nameDE');
+        } else {
+            $paymentMethodName = $this->config->get('PaymentCard.paymentCard.nameEN');
+        }
+        return $paymentMethodName;
     }
 
     /**
@@ -76,6 +85,6 @@ class PaymentCardPaymentMethod extends PaymentMethodService
      */
     public function canHandleSubscriptions():bool
     {
-        return true;
+        return false;
     }
 }

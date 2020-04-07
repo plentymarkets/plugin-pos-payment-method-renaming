@@ -8,7 +8,7 @@
   "namespace"             : "PaymentCard",
   "type"                  : "payment",
   "isClosedSource"        : true,
-  "categories"            : ["3588"],
+  "categories"            : ["3519"],
   "pluginIcon"            : "icon_plugin_md.png",
   "price"                 : 0.00,
   "shortDescription"      : {"de":"Das offizielle Kartenzahlung Plugin für plentymarkets", "en":"The official payment card plugin for plentymarkets"},
@@ -17,12 +17,6 @@
   "email"                 : "sales@plentymarkets.com",
   "phone"                 : "+49 561 98 681 100",
   "serviceProvider"       : "PaymentCard\\Providers\\PaymentCardServiceProvider",
-  "runOnBuild": [
-    "PaymentCard\\Migrations\\CreatePaymentCardPaymentMethod"
-  ],
-
-  "dataProviders": [
-
-  ]
-
+  "runOnBuild"            : [],
+  "dataProviders"         : []
 }

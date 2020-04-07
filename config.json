@@ -1,0 +1,26 @@
+{
+  "formatVersion": 1,
+  "menu": {
+    "Config.PaymentCardNames": {
+      "label": "Config.PaymentCardNames",
+      "formFields": {
+        "paymentCard.nameDE": {
+          "type": "inputText",
+          "required": true,
+          "label": "Config.paymentCardNameDE",
+          "options": {
+            "defaultValue": "Kartenzahlung"
+          }
+        },
+        "paymentCard.nameEN": {
+          "type": "inputText",
+          "required": true,
+          "label": "Config.paymentCardNameEN",
+          "options": {
+            "defaultValue": "Payment card"
+          }
+        }
+      }
+    }
+  }
+}

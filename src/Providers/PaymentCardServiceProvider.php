@@ -2,6 +2,8 @@
 
 namespace PaymentCard\Providers;
 
+use PaymentCard\Methods\PaymentCardPaymentMethod;
+use Plenty\Modules\Payment\Method\Contracts\PaymentMethodContainer;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 
@@ -22,8 +24,8 @@ class PaymentCardServiceProvider extends ServiceProvider
      *
      * @param Dispatcher $eventDispatcher
      */
-    public function boot(Dispatcher $eventDispatcher)
+    public function boot(Dispatcher $eventDispatcher, PaymentMethodContainer $payContainer)
     {
-
+        $payContainer->register('plenty::EC', PaymentCardPaymentMethod::class,[]);
     }
 }
