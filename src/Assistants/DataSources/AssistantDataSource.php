@@ -12,22 +12,9 @@ use Plenty\Plugin\ConfigRepository;
 class AssistantDataSource extends BaseWizardDataSource
 {
     /**
-     * @var SettingsService
-     */
-    protected $settingsService;
-
-    protected $activePayPalExpressContainers = [];
-
-    protected $activePayPalInstallmentBannerContainers = [];
-
-    /**
      * Source constructor.
      */
-    public function __construct(
-        SettingsService $settingsService
-    ) {
-        $this->settingsService = $settingsService;
-    }
+    public function __construct() {}
 
     /**
      * @return WizardData WizardData
