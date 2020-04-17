@@ -26,7 +26,6 @@ class ConfigurationAssistant extends AssistantProvider
             'key' => 'paymentCard-configuration-assistant',
             'translationNamespace' => 'PaymentCard',
             'title' => 'Assistant.title',
-            'createOptionIdTitle' => 'Assistant.createOptionIdTitle',
             'settingsHandlerClass' => PaymentCardSettingsHandler::class,
             'dataSource' => AssistantDataSource::class,
             'topics' => ['payment'],
