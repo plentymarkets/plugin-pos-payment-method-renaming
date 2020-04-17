@@ -2,8 +2,12 @@
 
 namespace PaymentCard\Assistants\Handlers;
 
+use Plenty\Modules\Plugin\Contracts\ConfigurationRepositoryContract;
+use Plenty\Modules\Plugin\Contracts\PluginRepositoryContract;
+use Plenty\Modules\Plugin\Models\Configuration;
+use Plenty\Modules\Plugin\Models\Plugin;
+use Plenty\Modules\Plugin\Repositories\PluginRepository;
 use Plenty\Modules\Wizard\Contracts\WizardSettingsHandler;
-use Plenty\Plugin\ConfigRepository;
 
 
 /**
@@ -19,11 +23,30 @@ class PaymentCardSettingsHandler implements WizardSettingsHandler
      */
     public function handle(array $data)
     {
-        if(isset($data) && isset($data['data'])){
-            /** @var ConfigRepository $configRepo */
-            $configRepo = pluginApp(ConfigRepository::class);
-            $configRepo->set('PaymentCard.paymentCard.nameDE', $data['data']['paymentMethodNameDE']);
-            $configRepo->set('PaymentCard.paymentCard.nameEN', $data['data']['paymentMethodNameEN']);
+        try{
+            $data = $data['data'];
+            if(isset($data)){
+                /** @var ConfigurationRepositoryContract $configRepo */
+                $configRepo = pluginApp(ConfigurationRepositoryContract::class);
+                /** @var PluginRepository $pluginRepo */
+                $pluginRepo = pluginApp(PluginRepositoryContract::class);
+                /** @var Plugin $paymentCardPlugin */
+                $paymentCardPlugin = $pluginRepo->getPluginByName('PaymentCard');
+
+                $configuration = [];
+
+                /** @var Configuration $deNameConfig */
+                $deNameConfig = $paymentCardPlugin->configurations->where('key','paymentCard.nameDE')->first();
+                $configuration[] = ['key' => $deNameConfig->key, 'value' => $data['paymentMethodNameDE']];
+
+                /** @var Configuration $enNameConfig */
+                $enNameConfig = $paymentCardPlugin->configurations->where('key','paymentCard.nameEN')->first();
+                $configuration[] = ['key' => $enNameConfig->key, 'value' => $data['paymentMethodNameEN']];
+
+                $configRepo->saveConfiguration($paymentCardPlugin->id, $configuration);
+            }
+        }catch(\Exception $x){
+            return false;
         }
         return true;
     }
