@@ -40,9 +40,9 @@ class CashPaymentMethod extends PaymentMethodService
     {
         $paymentMethodName = '';
         if($lang == 'de'){
-            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameDE');
+            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameDE', 'Barzahlung');
         } else {
-            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameEN');
+            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameEN', 'Cash');
         }
         return $paymentMethodName;
     }
