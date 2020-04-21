@@ -1,13 +1,13 @@
 <?php
 
-namespace PaymentCard\Assistants\DataSources;
+namespace POSPaymentMethodRenaming\Assistants\DataSources;
 
 use Plenty\Modules\Wizard\Models\WizardData;
 use Plenty\Modules\Wizard\Services\DataSources\BaseWizardDataSource;
 use Plenty\Plugin\ConfigRepository;
 
 /**
- * @package PayPal\Assistants\DataSources
+ * @package POSPaymentMethodRenaming\Assistants\DataSources
  */
 class AssistantDataSource extends BaseWizardDataSource
 {
@@ -38,8 +38,10 @@ class AssistantDataSource extends BaseWizardDataSource
     {
         /** @var ConfigRepository $config */
         $config = pluginApp(ConfigRepository::class);
-        $config->set('PaymentCard.paymentCard.nameDE', 'Kartenzahlung');
-        $config->set('PaymentCard.paymentCard.nameEN', 'Payment Card');
+        $config->set('POSPaymentMethodRenaming.cash.nameDE', 'Barzahlung');
+        $config->set('POSPaymentMethodRenaming.cash.nameEN', 'Cash');
+        $config->set('POSPaymentMethodRenaming.paymentCard.nameDE', 'Kartenzahlung');
+        $config->set('POSPaymentMethodRenaming.paymentCard.nameEN', 'Payment Card');
     }
 
     /**
@@ -51,8 +53,10 @@ class AssistantDataSource extends BaseWizardDataSource
         /** @var ConfigRepository $config */
         $config = pluginApp(ConfigRepository::class);
         $mopNames = [];
-        $mopNames['paymentMethodNameDE'] = $config->get('PaymentCard.paymentCard.nameDE');
-        $mopNames['paymentMethodNameEN'] = $config->get('PaymentCard.paymentCard.nameEN');
+        $mopNames['cashNameDE'] = $config->get('POSPaymentMethodRenaming.cash.nameDE');
+        $mopNames['cashNameEN'] = $config->get('POSPaymentMethodRenaming.cash.nameEN');
+        $mopNames['paymentCardNameDE'] = $config->get('POSPaymentMethodRenaming.paymentCard.nameDE');
+        $mopNames['paymentCardNameEN'] = $config->get('POSPaymentMethodRenaming.paymentCard.nameEN');
         $wizardData['data'] = $mopNames;
 
         return $wizardData;

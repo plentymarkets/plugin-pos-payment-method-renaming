@@ -6,10 +6,10 @@ use Plenty\Modules\Payment\Method\Contracts\PaymentMethodService;
 use Plenty\Plugin\ConfigRepository;
 
 /**
- * Class PaymentCardPaymentMethod
+ * Class CashPaymentMethod
  * @package POSPaymentMethodRenaming\Methods
  */
-class PaymentCardPaymentMethod extends PaymentMethodService
+class CashPaymentMethod extends PaymentMethodService
 {
     /**
      * @var ConfigRepository
@@ -40,9 +40,9 @@ class PaymentCardPaymentMethod extends PaymentMethodService
     {
         $paymentMethodName = '';
         if($lang == 'de'){
-            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameDE');
+            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameDE');
         } else {
-            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameEN');
+            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameEN');
         }
         return $paymentMethodName;
     }

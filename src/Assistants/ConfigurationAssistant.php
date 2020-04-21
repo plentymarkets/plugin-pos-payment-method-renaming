@@ -1,12 +1,10 @@
 <?php
 
-namespace PaymentCard\Assistants;
+namespace POSPaymentMethodRenaming\Assistants;
 
-use PaymentCard\Assistants\DataSources\AssistantDataSource;
-use PaymentCard\Assistants\Handlers\PaymentCardSettingsHandler;
-use Plenty\Modules\Otto\Item\Assistants\Categories\CategoryHandler;
+use POSPaymentMethodRenaming\Assistants\DataSources\AssistantDataSource;
+use POSPaymentMethodRenaming\Assistants\Handlers\PaymentMethodRenamingSettingsHandler;
 use Plenty\Modules\Wizard\Services\WizardProvider as AssistantProvider;
-use Plenty\Plugin\Translation\Translator;
 
 class ConfigurationAssistant extends AssistantProvider
 {
@@ -23,13 +21,13 @@ class ConfigurationAssistant extends AssistantProvider
     protected function structure(): array
     {
         return [
-            'key' => 'paymentCard-configuration-assistant',
-            'translationNamespace' => 'PaymentCard',
+            'key' => 'posPaymentMethodRenaming-configuration-assistant',
+            'translationNamespace' => 'POSPaymentMethodRenaming',
             'title' => 'Assistant.title',
-            'settingsHandlerClass' => PaymentCardSettingsHandler::class,
+            'settingsHandlerClass' => PaymentMethodRenamingSettingsHandler::class,
             'dataSource' => AssistantDataSource::class,
             'topics' => ['payment'],
-            'keywords' => ['PaymentCard,Kartenzahlung'],
+            'keywords' => ['PaymentCard,Kartenzahlung','Cash','Barzahlung','POSPaymentMethodRenaming','POS','Payment method renaming','Zahlungsart','Zahlungsart umbenennen'],
             'shortDescription' => 'Assistant.shortDescription',
             'steps' => [
                 'step1' => [
@@ -39,16 +37,39 @@ class ConfigurationAssistant extends AssistantProvider
                     'sections' => [
                         [
                             'form' => [
-                                'paymentMethodNameDE' => [
+                                'cashNameDE' => [
                                     'type' => 'text',
                                     'options' => [
-                                        'name' => 'Assistant.input.paymentMethodNameDE',
+                                        'name' => 'Assistant.input.cashNameDE',
                                     ]
                                 ],
-                                'paymentMethodNameEN' => [
+                                'cashNameEN' => [
                                     'type' => 'text',
                                     'options' => [
-                                        'name' => 'Assistant.input.paymentMethodNameEN',
+                                        'name' => 'Assistant.input.cashNameEN',
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                'step2' => [
+                    'title' => 'Assistant.titleStep2',
+                    'description' => 'Assistant.descriptionStep2',
+                    'showFullDescription' => true,
+                    'sections' => [
+                        [
+                            'form' => [
+                                'paymentCardNameDE' => [
+                                    'type' => 'text',
+                                    'options' => [
+                                        'name' => 'Assistant.input.paymentCardNameDE',
+                                    ]
+                                ],
+                                'paymentCardNameEN' => [
+                                    'type' => 'text',
+                                    'options' => [
+                                        'name' => 'Assistant.input.paymentCardNameEN',
                                     ]
                                 ]
                             ]

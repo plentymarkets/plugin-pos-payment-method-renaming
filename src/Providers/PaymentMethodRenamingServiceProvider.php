@@ -1,9 +1,10 @@
 <?php //strict
 
-namespace PaymentCard\Providers;
+namespace POSPaymentMethodRenaming\Providers;
 
-use PaymentCard\Assistants\ConfigurationAssistant;
-use PaymentCard\Methods\PaymentCardPaymentMethod;
+use POSPaymentMethodRenaming\Assistants\ConfigurationAssistant;
+use POSPaymentMethodRenaming\Methods\PaymentCardPaymentMethod;
+use POSPaymentMethodRenaming\Methods\CashPaymentMethod;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodContainer;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
@@ -11,10 +12,10 @@ use Plenty\Modules\Wizard\Contracts\WizardContainerContract as AssistantContaine
 
 
 /**
- * Class PaymentCardServiceProvider
- * @package PaymentCard\Providers
+ * Class PaymentMethodRenamingServiceProvider
+ * @package POSPaymentMethodRenaming\Providers
  */
-class PaymentCardServiceProvider extends ServiceProvider
+class PaymentMethodRenamingServiceProvider extends ServiceProvider
 {
     public function register()
     {
@@ -28,11 +29,12 @@ class PaymentCardServiceProvider extends ServiceProvider
      */
     public function boot(Dispatcher $eventDispatcher, PaymentMethodContainer $payContainer)
     {
+        $payContainer->register('plenty::cash', CashPaymentMethod::class,[]);
         $payContainer->register('plenty::EC', PaymentCardPaymentMethod::class,[]);
 
         // Register the assistant
         /** @var AssistantContainerContract $assistantContainer */
         $assistantContainer = pluginApp(AssistantContainerContract::class);
-        $assistantContainer->register('paymentCard-configuration-assistant', ConfigurationAssistant::class);
+        $assistantContainer->register('posPaymentMethodRenaming-configuration-assistant', ConfigurationAssistant::class);
     }
 }

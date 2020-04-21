@@ -1,6 +1,27 @@
 {
   "formatVersion": 1,
   "menu": {
+    "Config.CashNames": {
+      "label": "Config.CashNames",
+      "formFields": {
+        "cash.nameDE": {
+          "type": "inputText",
+          "required": true,
+          "label": "Config.cashNameDE",
+          "options": {
+            "defaultValue": "Barzahlung"
+          }
+        },
+        "cash.nameEN": {
+          "type": "inputText",
+          "required": true,
+          "label": "Config.cashNameEN",
+          "options": {
+            "defaultValue": "Cash"
+          }
+        }
+      }
+    },
     "Config.PaymentCardNames": {
       "label": "Config.PaymentCardNames",
       "formFields": {
