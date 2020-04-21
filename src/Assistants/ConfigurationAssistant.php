@@ -26,7 +26,7 @@ class ConfigurationAssistant extends AssistantProvider
             'title' => 'Assistant.title',
             'settingsHandlerClass' => PaymentMethodRenamingSettingsHandler::class,
             'dataSource' => AssistantDataSource::class,
-            'topics' => ['payment'],
+            'topics' => ['integration'],
             'keywords' => ['PaymentCard,Kartenzahlung','Cash','Barzahlung','POSPaymentMethodRenaming','POS','Payment method renaming','Zahlungsart','Zahlungsart umbenennen'],
             'shortDescription' => 'Assistant.shortDescription',
             'steps' => [
