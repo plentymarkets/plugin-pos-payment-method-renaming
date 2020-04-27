@@ -24,7 +24,7 @@ class AssistantDataSource extends BaseWizardDataSource
         //for WizardContainer ($wizardArray['isCompleted'] = $dataSource->findData()->data->default ? true : false;)
         /** @var WizardData $wizardData */
         $wizardData = pluginApp(WizardData::class);
-        $wizardData->data = ['default' => false];
+        // $wizardData->data = ['default' => true];
 
         return $wizardData;
     }
@@ -57,8 +57,7 @@ class AssistantDataSource extends BaseWizardDataSource
         $mopNames['cashNameEN'] = $config->get('POSPaymentMethodRenaming.cash.nameEN');
         $mopNames['paymentCardNameDE'] = $config->get('POSPaymentMethodRenaming.paymentCard.nameDE');
         $mopNames['paymentCardNameEN'] = $config->get('POSPaymentMethodRenaming.paymentCard.nameEN');
-        $wizardData['data'] = $mopNames;
-
+        $wizardData['default']['data'] = $mopNames;
         return $wizardData;
     }
 
@@ -70,8 +69,18 @@ class AssistantDataSource extends BaseWizardDataSource
      */
     public function getByOptionId(string $optionId = 'default')
     {
-        $data = $this->get();
-        return $data;
+        $dataStructure = $this->dataStructure;
+        $entities = $this->get()[$optionId];
+        $dataStructure['data'] = $entities['data'];
+        return $dataStructure;
+    }
+
+    /**
+     * @return array
+     */
+    public function getIdentifiers()
+    {
+        return array_keys($this->get());
     }
 
 }

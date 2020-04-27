@@ -2,6 +2,7 @@
 
 namespace POSPaymentMethodRenaming\Assistants;
 
+use Plenty\Plugin\Application;
 use POSPaymentMethodRenaming\Assistants\DataSources\AssistantDataSource;
 use POSPaymentMethodRenaming\Assistants\Handlers\PaymentMethodRenamingSettingsHandler;
 use Plenty\Modules\Wizard\Services\WizardProvider as AssistantProvider;
@@ -21,7 +22,7 @@ class ConfigurationAssistant extends AssistantProvider
     protected function structure(): array
     {
         return [
-            'key' => 'posPaymentMethodRenaming-configuration-assistant',
+            'key' => 'pos-payment-method-renaming-assistant',
             'translationNamespace' => 'POSPaymentMethodRenaming',
             'title' => 'Assistant.title',
             'settingsHandlerClass' => PaymentMethodRenamingSettingsHandler::class,
@@ -29,6 +30,7 @@ class ConfigurationAssistant extends AssistantProvider
             'topics' => ['integration'],
             'keywords' => ['PaymentCard,Kartenzahlung','Cash','Barzahlung','POSPaymentMethodRenaming','POS','Payment method renaming','Zahlungsart','Zahlungsart umbenennen'],
             'shortDescription' => 'Assistant.shortDescription',
+            "iconPath" => $this->getIcon(),
             'steps' => [
                 'step1' => [
                     'title' => 'Assistant.titleStep1',
@@ -78,5 +80,16 @@ class ConfigurationAssistant extends AssistantProvider
                 ]
             ]
         ];
+    }
+
+    /**
+     * @return string
+     */
+    private function getIcon()
+    {
+        $app = pluginApp(Application::class);
+        $icon = $app->getUrlPath('pospaymentmethodrenaming').'/images/rename_MOP_POS_Assi.png';
+
+        return $icon;
     }
 }

@@ -35,6 +35,6 @@ class PaymentMethodRenamingServiceProvider extends ServiceProvider
         // Register the assistant
         /** @var AssistantContainerContract $assistantContainer */
         $assistantContainer = pluginApp(AssistantContainerContract::class);
-        $assistantContainer->register('posPaymentMethodRenaming-configuration-assistant', ConfigurationAssistant::class);
+        $assistantContainer->register('pos-payment-method-renaming-assistant', ConfigurationAssistant::class);
     }
 }
