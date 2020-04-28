@@ -29,7 +29,7 @@ class PaymentMethodRenamingServiceProvider extends ServiceProvider
      */
     public function boot(Dispatcher $eventDispatcher, PaymentMethodContainer $payContainer)
     {
-        $payContainer->register('plenty::cash', CashPaymentMethod::class,[]);
+        $payContainer->register('plenty::CASH', CashPaymentMethod::class,[]);
         $payContainer->register('plenty::EC', PaymentCardPaymentMethod::class,[]);
 
         // Register the assistant
