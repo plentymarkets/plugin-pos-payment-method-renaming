@@ -43,12 +43,14 @@ class ConfigurationAssistant extends AssistantProvider
                                     'type' => 'text',
                                     'options' => [
                                         'name' => 'Assistant.input.cashNameDE',
+                                        'required' => true
                                     ]
                                 ],
                                 'cashNameEN' => [
                                     'type' => 'text',
                                     'options' => [
                                         'name' => 'Assistant.input.cashNameEN',
+                                        'required' => true
                                     ]
                                 ]
                             ]
@@ -66,12 +68,14 @@ class ConfigurationAssistant extends AssistantProvider
                                     'type' => 'text',
                                     'options' => [
                                         'name' => 'Assistant.input.paymentCardNameDE',
+                                        'required' => true
                                     ]
                                 ],
                                 'paymentCardNameEN' => [
                                     'type' => 'text',
                                     'options' => [
                                         'name' => 'Assistant.input.paymentCardNameEN',
+                                        'required' => true
                                     ]
                                 ]
                             ]
