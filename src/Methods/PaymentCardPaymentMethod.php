@@ -40,9 +40,9 @@ class PaymentCardPaymentMethod extends PaymentMethodService
     {
         $paymentMethodName = '';
         if($lang == 'de'){
-            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameDE', 'Kartenzahlung');
+            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameDE');
         } else {
-            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameEN', 'Payment card');
+            $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameEN');
         }
         return $paymentMethodName;
     }

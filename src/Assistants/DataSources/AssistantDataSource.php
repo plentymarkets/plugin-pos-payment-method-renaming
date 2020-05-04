@@ -30,21 +30,6 @@ class AssistantDataSource extends BaseWizardDataSource
     }
 
     /**
-     * @param string $optionId
-     *
-     * @throws \Exception
-     */
-    public function deleteDataOption(string $optionId)
-    {
-        /** @var ConfigRepository $config */
-        $config = pluginApp(ConfigRepository::class);
-        $config->set('POSPaymentMethodRenaming.cash.nameDE', 'Barzahlung');
-        $config->set('POSPaymentMethodRenaming.cash.nameEN', 'Cash');
-        $config->set('POSPaymentMethodRenaming.paymentCard.nameDE', 'Kartenzahlung');
-        $config->set('POSPaymentMethodRenaming.paymentCard.nameEN', 'Payment Card');
-    }
-
-    /**
      * @return array
      */
     public function get()
@@ -80,7 +65,23 @@ class AssistantDataSource extends BaseWizardDataSource
      */
     public function getIdentifiers()
     {
-        return array_keys($this->get());
+        $identifiers = [];
+        $options = $this->get();
+        if($this->checkSettings($options)){
+            $identifiers = array_keys($options);
+        }
+        return $identifiers;
+    }
+
+    private function checkSettings($options){
+        if(isset($options['default']) && isset($options['default']['data'])){
+            $mopNames = $options['default']['data'];
+            if (isset($mopNames['cashNameDE']) && isset($mopNames['cashNameEN'])
+                && isset($mopNames['paymentCardNameDE'])  && isset($mopNames['paymentCardNameEN']) ) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }

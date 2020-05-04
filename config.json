@@ -7,18 +7,12 @@
         "cash.nameDE": {
           "type": "inputText",
           "required": true,
-          "label": "Config.cashNameDE",
-          "options": {
-            "defaultValue": "Barzahlung"
-          }
+          "label": "Config.cashNameDE"
         },
         "cash.nameEN": {
           "type": "inputText",
           "required": true,
-          "label": "Config.cashNameEN",
-          "options": {
-            "defaultValue": "Cash"
-          }
+          "label": "Config.cashNameEN"
         }
       }
     },
@@ -28,18 +22,12 @@
         "paymentCard.nameDE": {
           "type": "inputText",
           "required": true,
-          "label": "Config.paymentCardNameDE",
-          "options": {
-            "defaultValue": "Kartenzahlung"
-          }
+          "label": "Config.paymentCardNameDE"
         },
         "paymentCard.nameEN": {
           "type": "inputText",
           "required": true,
-          "label": "Config.paymentCardNameEN",
-          "options": {
-            "defaultValue": "Payment card"
-          }
+          "label": "Config.paymentCardNameEN"
         }
       }
     }
