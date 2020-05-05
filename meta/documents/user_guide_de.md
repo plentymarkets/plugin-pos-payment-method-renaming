@@ -9,7 +9,7 @@ Die Umbenennung der plentyPOS Standardzahlungsarten nimmst du mithilfe eines Ass
 #### Standardzahlungsarten umbenennen:
 
 1. Öffne das Menü **Einrichtung » Assistenten » Integration**.
-2. Öffne den Assistenten **POS Zahlungsartnamen**.
+2. Öffne den Assistenten **plentyPOS Zahlungsarten**.
 3. Schließe den Assistenten vollständig ab.
 
 ## Lizenz

@@ -1,12 +1,17 @@
-# plentymarkets Plugin zur Umbenennung der POS Standardzahlungsarten
+# plentymarkets Plugin for renaming plentyPOS default payment methods
 
-Mit diesem Plugin können Sie die POS Standardzahlungsarten 4 Barverkauf und 11 Kartenzahlung abändern.
+This plugin enables you to set up individual names for the default payment methods with the ID 4 (Cash payment) and ID 11 (Card payment) that are used by plentyPOS.
 
-##### Namen der Zahlungsart ändern:
-1. Öffnen Sie das Menü **Einrichtung&nbsp;» Assistenten&nbsp;» Integration**.
-2. Wählen Sie den Assistenten **POS Zahlungsartnamen**.
-3. Schließen Sie den Assistenten vollständig ab.
+## Renaming default payment methods
+
+You can carry out the renaming of the default payment methods by using an assistant in the plentymarkets back end. The assistant leads you through the necessary settings. Proceed as described below.
+
+##### Renaming default payment methods:
+
+1. Go to **Setup » Assistants » Integration**.
+2. Open the assistant **plentyPOS payment methods**.
+3. Complete the assistant.
 
 ## Lizenz
 
-Das gesamte Projekt unterliegt der GNU AFFERO GENERAL PUBLIC LICENSE – weitere Informationen finden Sie in der [LICENSE.md](https://github.com/plentymarkets/plugin-payment-cashinadvance/blob/master/LICENSE.md).
+This project is licensed under the AFFERO GENERAL PUBLIC LICENSE.
