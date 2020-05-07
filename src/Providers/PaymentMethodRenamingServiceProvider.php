@@ -6,7 +6,6 @@ use POSPaymentMethodRenaming\Assistants\ConfigurationAssistant;
 use POSPaymentMethodRenaming\Methods\PaymentCardPaymentMethod;
 use POSPaymentMethodRenaming\Methods\CashPaymentMethod;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodContainer;
-use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Modules\Wizard\Contracts\WizardContainerContract as AssistantContainerContract;
 
@@ -25,9 +24,9 @@ class PaymentMethodRenamingServiceProvider extends ServiceProvider
     /**
      * Boot additional services for the payment method
      *
-     * @param Dispatcher $eventDispatcher
+     * @param PaymentMethodContainer $payContainer
      */
-    public function boot(Dispatcher $eventDispatcher, PaymentMethodContainer $payContainer)
+    public function boot(PaymentMethodContainer $payContainer)
     {
         $payContainer->register('plenty::CASH', CashPaymentMethod::class,[]);
         $payContainer->register('plenty::EC', PaymentCardPaymentMethod::class,[]);

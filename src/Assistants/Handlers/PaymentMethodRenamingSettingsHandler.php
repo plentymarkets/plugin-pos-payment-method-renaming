@@ -4,14 +4,13 @@ namespace POSPaymentMethodRenaming\Assistants\Handlers;
 
 use Plenty\Modules\Plugin\Contracts\ConfigurationRepositoryContract;
 use Plenty\Modules\Plugin\Contracts\PluginRepositoryContract;
-use Plenty\Modules\Plugin\Models\Configuration;
 use Plenty\Modules\Plugin\Models\Plugin;
 use Plenty\Modules\Plugin\Repositories\PluginRepository;
 use Plenty\Modules\Wizard\Contracts\WizardSettingsHandler;
 
 
 /**
- * Class CategoryHandler
+ * Class PaymentMethodRenamingSettingsHandler
  *
  * @package POSPaymentMethodRenaming\Assistants\Handlers
  */

@@ -21,10 +21,8 @@ class AssistantDataSource extends BaseWizardDataSource
      */
     public function findData()
     {
-        //for WizardContainer ($wizardArray['isCompleted'] = $dataSource->findData()->data->default ? true : false;)
         /** @var WizardData $wizardData */
         $wizardData = pluginApp(WizardData::class);
-        // $wizardData->data = ['default' => true];
 
         return $wizardData;
     }
