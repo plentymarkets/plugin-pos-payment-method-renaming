@@ -1,1 +1,1 @@
-# plugin-payment-card
+# POSPaymentMethodRenaming
