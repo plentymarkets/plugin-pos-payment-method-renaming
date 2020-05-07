@@ -34,10 +34,9 @@ class ConfigurationAssistant extends AssistantProvider
             'steps' => [
                 'step1' => [
                     'title' => 'Assistant.titleStep1',
-                    'description' => 'Assistant.descriptionStep1',
-                    'showFullDescription' => true,
                     'sections' => [
                         [
+                            'title' => 'Assistant.descriptionStep1',
                             'form' => [
                                 'cashNameDE' => [
                                     'type' => 'text',
@@ -59,10 +58,9 @@ class ConfigurationAssistant extends AssistantProvider
                 ],
                 'step2' => [
                     'title' => 'Assistant.titleStep2',
-                    'description' => 'Assistant.descriptionStep2',
-                    'showFullDescription' => true,
                     'sections' => [
                         [
+                            'title' => 'Assistant.descriptionStep2',
                             'form' => [
                                 'paymentCardNameDE' => [
                                     'type' => 'text',
