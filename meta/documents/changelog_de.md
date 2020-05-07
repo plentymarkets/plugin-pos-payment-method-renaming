@@ -1,5 +1,5 @@
-# Versionshinweise für das PaymentCard Plugin
+# Versionshinweise für das plentyPos Zahlungsarten Plugin
 
-## v1.0.0 (2020-04-07)
+## v1.0.0 (2020-05-07)
 ### Hinzugefügt
 - Initiale Version
