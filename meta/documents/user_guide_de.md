@@ -14,4 +14,4 @@ Die Umbenennung der plentyPOS Standardzahlungsarten nimmst du mithilfe eines Ass
 
 ## Lizenz
 
-Das gesamte Projekt unterliegt der GNU AFFERO GENERAL PUBLIC LICENSE.
+Das gesamte Projekt unterliegt der GNU AFFERO GENERAL PUBLIC LICENSE  – weitere Informationen finden Sie in der [LICENSE.md](https://github.com/plentymarkets/plugin-pos-payment-method-renaming/blob/master/LICENSE.md).

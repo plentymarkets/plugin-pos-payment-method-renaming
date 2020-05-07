@@ -14,4 +14,4 @@ You can carry out the renaming of the default payment methods by using an assist
 
 ## Lizenz
 
-This project is licensed under the AFFERO GENERAL PUBLIC LICENSE.
+This project is licensed under the AFFERO GENERAL PUBLIC LICENSE – find further information in the [LICENSE.md](https://github.com/plentymarkets/plugin-pos-payment-method-renaming/blob/master/LICENSE.md).
