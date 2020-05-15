@@ -1,5 +1,9 @@
 # Release Notes for the plentyPos payment methods Plugin
 
+## v1.0.1 (2020-05-15)
+### Fixed
+- Errors could occur in case the assistant was not completed after installing and activating the plugin.
+
 ## v1.0.0 (2020-05-07)
 ### Added
 - Initial version
