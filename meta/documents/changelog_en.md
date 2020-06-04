@@ -1,5 +1,10 @@
 # Release Notes for the plentyPos payment methods Plugin
 
+## v1.0.2 (2020-05-29)
+### Fixed
+- Keyword optimisation for plentyMarketplace
+- User guide adjustments
+
 ## v1.0.1 (2020-05-15)
 ### Fixed
 - Errors could occur in case the assistant was not completed after installing and activating the plugin.
