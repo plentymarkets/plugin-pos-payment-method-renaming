@@ -2,7 +2,7 @@
 
 ## v1.0.2 (2020-05-29)
 ### Behoben
-- Stichwortoptimierung für den Marketplace
+- Suchwortoptimierung für den plentyMarketplace
 - Anpassungen im User Guide
 
 ## v1.0.1 (2020-05-15)
