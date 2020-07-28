@@ -2,14 +2,14 @@
 
 namespace POSPaymentMethodRenaming\Methods;
 
-use Plenty\Modules\Payment\Method\Contracts\PaymentMethodService;
+use Plenty\Modules\Payment\Method\Services\PaymentMethodBaseService;
 use Plenty\Plugin\ConfigRepository;
 
 /**
  * Class CashPaymentMethod
  * @package POSPaymentMethodRenaming\Methods
  */
-class CashPaymentMethod extends PaymentMethodService
+class CashPaymentMethod extends PaymentMethodBaseService
 {
     /**
      * @var ConfigRepository
@@ -25,24 +25,36 @@ class CashPaymentMethod extends PaymentMethodService
     /**
      * @return bool
      */
-    public function isActive():bool
+    public function isActive(): bool
     {
+        try {
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            return $cashPlugin->isActive();
+        } catch (\Exception $e) {
+        }
         return false;
     }
 
     /**
      * Get shown name
      *
-     * @param $lang
+     * @param string $lang
      * @return string
      */
-    public function getName($lang = 'de')
+    public function getName($lang = 'de'): string
     {
         $paymentMethodName = '';
-        if($lang == 'de'){
+        if ($lang == 'de') {
             $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameDE', '');
         } else {
             $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.cash.nameEN', '');
+        }
+
+        try {
+            /** @var PaymentMethodBaseService $cashPlugin */
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            $paymentMethodName = $cashPlugin->getName();
+        } catch (\Exception $e) {
         }
         return $paymentMethodName;
     }
@@ -52,7 +64,7 @@ class CashPaymentMethod extends PaymentMethodService
      *
      * @return bool
      */
-    public function isBackendSearchable():bool
+    public function isBackendSearchable(): bool
     {
         return true;
     }
@@ -62,7 +74,7 @@ class CashPaymentMethod extends PaymentMethodService
      *
      * @return bool
      */
-    public function isBackendActive():bool
+    public function isBackendActive(): bool
     {
         return true;
     }
@@ -73,18 +85,100 @@ class CashPaymentMethod extends PaymentMethodService
      * @param string $lang
      * @return string
      */
-    public function getBackendName(string $lang):string
+    public function getBackendName(string $lang): string
     {
         return $this->getName($lang);
     }
 
     /**
-     * Check if this payment method can handle subscriptions
-     *
      * @return bool
      */
-    public function canHandleSubscriptions():bool
+    public function canHandleSubscriptions(): bool
     {
-        return false;
+        $subscriptions = false;
+        try {
+            /** @var PaymentMethodBaseService $cashPlugin */
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            $subscriptions = $cashPlugin->canHandleSubscriptions();
+        } catch (\Exception $e) {
+        }
+        return $subscriptions;
     }
+
+    /**
+     * Get PayUponPickup Icon if active
+     *
+     * @param string $lang
+     * @return string
+     */
+    public function getIcon(string $lang = 'de'): string
+    {
+        $icon = '';
+        try {
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            $icon = $cashPlugin->getIcon($lang);
+        } catch (\Exception $e) {
+        }
+        return $icon;
+    }
+
+    /**
+    * Get PayUponPickup description if active
+    *
+    * @param string $lang
+    * @return string
+    */
+    public function getDescription(string $lang = 'de'): string
+    {
+        $description = '';
+        try {
+            /** @var PaymentMethodBaseService $cashPlugin */
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            $description = $cashPlugin->getDescription($lang);
+        } catch (\Exception $e) {
+        }
+        return $description;
+    }
+
+    public function isSwitchableTo(): bool
+    {
+        return true;
+    }
+
+    public function isSwitchableFrom(): bool
+    {
+        return true;
+    }
+
+    /**
+     * Get PayUponPickup SourceUrl if active
+     *
+     * @param string $lang
+     * @return string
+     */
+    public function getSourceUrl(string $lang = 'de'): string
+    {
+        $sourceUrl = '';
+        try {
+            /** @var PaymentMethodBaseService $cashPlugin */
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            $sourceUrl = $cashPlugin->getSourceUrl($lang);
+        } catch (\Exception $e) {
+        }
+        return $sourceUrl;
+    }
+
+
+    public function getBackendIcon(): string
+    {
+        $backendIcon = '';
+        try {
+            /** @var PaymentMethodBaseService $cashPlugin */
+            $cashPlugin = pluginApp(\PayUponPickup\Methods\PayUponPickupPaymentMethod::class);
+            $backendIcon = $cashPlugin->getBackendIcon();
+        } catch (\Exception $e) {
+        }
+        return $backendIcon;
+    }
+
 }
