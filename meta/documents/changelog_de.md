@@ -1,5 +1,9 @@
 # Versionshinweise für das plentyPos Zahlungsarten Plugin
 
+## v1.0.3 (2020-07-28)
+### Geändert
+- Anpassungen im User Guide
+
 ## v1.0.2 (2020-05-29)
 ### Behoben
 - Suchwortoptimierung für den plentyMarketplace

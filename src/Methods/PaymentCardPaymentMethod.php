@@ -2,14 +2,14 @@
 
 namespace POSPaymentMethodRenaming\Methods;
 
-use Plenty\Modules\Payment\Method\Contracts\PaymentMethodService;
+use Plenty\Modules\Payment\Method\Services\PaymentMethodBaseService;
 use Plenty\Plugin\ConfigRepository;
 
 /**
  * Class PaymentCardPaymentMethod
  * @package POSPaymentMethodRenaming\Methods
  */
-class PaymentCardPaymentMethod extends PaymentMethodService
+class PaymentCardPaymentMethod extends PaymentMethodBaseService
 {
     /**
      * @var ConfigRepository
@@ -21,25 +21,16 @@ class PaymentCardPaymentMethod extends PaymentMethodService
         $this->config = $configRepository;
     }
 
-
-    /**
-     * @return bool
-     */
-    public function isActive():bool
-    {
-        return false;
-    }
-
     /**
      * Get shown name
      *
      * @param $lang
      * @return string
      */
-    public function getName($lang = 'de')
+    public function getName(string $lang = 'de'): string
     {
         $paymentMethodName = '';
-        if($lang == 'de'){
+        if ($lang == 'de') {
             $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameDE', '');
         } else {
             $paymentMethodName = $this->config->get('POSPaymentMethodRenaming.paymentCard.nameEN', '');
@@ -48,21 +39,11 @@ class PaymentCardPaymentMethod extends PaymentMethodService
     }
 
     /**
-     * Check if this payment method should be searchable in the backend
-     *
-     * @return bool
-     */
-    public function isBackendSearchable():bool
-    {
-        return true;
-    }
-
-    /**
      * Check if this payment method should be active in the backend
      *
      * @return bool
      */
-    public function isBackendActive():bool
+    public function isBackendActive(): bool
     {
         return true;
     }
@@ -73,18 +54,9 @@ class PaymentCardPaymentMethod extends PaymentMethodService
      * @param string $lang
      * @return string
      */
-    public function getBackendName(string $lang):string
+    public function getBackendName(string $lang= 'de'): string
     {
         return $this->getName($lang);
     }
 
-    /**
-     * Check if this payment method can handle subscriptions
-     *
-     * @return bool
-     */
-    public function canHandleSubscriptions():bool
-    {
-        return false;
-    }
 }
