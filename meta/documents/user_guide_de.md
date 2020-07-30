@@ -2,6 +2,10 @@
 
 Mit diesem Plugin kannst du individuelle Namen für die plentyPOS Standardzahlungsarten mit der ID 4 (Barzahlung) und der ID 11 (Kartenzahlung) vergeben.
 
+<div class="alert alert-warning" role="alert">
+   Achte, darauf dass das Plugin eine niedrige Position als das Plugin Barverkauf plugin hat (falls verwendet). //TODO Hinweis schön machen
+</div>
+
 ## Standardzahlungsarten umbenennen
 
 Die Umbenennung der plentyPOS Standardzahlungsarten nimmst du mithilfe eines Assistenten im plentymarkets Backend vor. Dieser führt dich durch die notwendigen Einstellungen. Gehe dazu wie unten beschrieben vor.
