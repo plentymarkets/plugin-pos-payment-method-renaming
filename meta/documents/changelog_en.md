@@ -2,7 +2,7 @@
 
 ## v1.0.4 (2021-06-29)
 ### Added
-- Payment method coupon (ID 1170)
+- Payment method coupon (ID 1700)
 
 ## v1.0.3 (2020-07-28)
 ### Changed
