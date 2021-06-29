@@ -28,7 +28,7 @@ class ConfigurationAssistant extends AssistantProvider
             'settingsHandlerClass' => PaymentMethodRenamingSettingsHandler::class,
             'dataSource' => AssistantDataSource::class,
             'topics' => ['integration'],
-            'keywords' => ['PaymentCard,Kartenzahlung','Cash','Barzahlung','POSPaymentMethodRenaming','POS','Payment method renaming','Zahlungsart','Zahlungsart umbenennen'],
+            'keywords' => ['PaymentCard','Kartenzahlung','Cash','Barzahlung','coupon','Gutschein','POSPaymentMethodRenaming','POS','Payment method renaming','Zahlungsart','Zahlungsart umbenennen'],
             'shortDescription' => 'Assistant.shortDescription',
             "iconPath" => $this->getIcon(),
             'steps' => [
@@ -73,6 +73,30 @@ class ConfigurationAssistant extends AssistantProvider
                                     'type' => 'text',
                                     'options' => [
                                         'name' => 'Assistant.input.paymentCardNameEN',
+                                        'required' => true
+                                    ]
+                                ]
+                            ]
+                        ]
+                    ]
+                ],
+                'step3' => [
+                    'title' => 'Assistant.titleStep3',
+                    'sections' => [
+                        [
+                            'title' => 'Assistant.descriptionStep3',
+                            'form' => [
+                                'couponNameDE' => [
+                                    'type' => 'text',
+                                    'options' => [
+                                        'name' => 'Assistant.input.couponNameDE',
+                                        'required' => true
+                                    ]
+                                ],
+                                'couponNameEN' => [
+                                    'type' => 'text',
+                                    'options' => [
+                                        'name' => 'Assistant.input.couponNameEN',
                                         'required' => true
                                     ]
                                 ]

@@ -1,5 +1,9 @@
 # Release Notes for the plentyPos payment methods Plugin
 
+## v1.0.4 (2021-06-29)
+### Added
+- Payment method coupon
+
 ## v1.0.3 (2020-07-28)
 ### Changed
 - User guide adjustments

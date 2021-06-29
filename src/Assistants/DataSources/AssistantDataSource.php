@@ -40,6 +40,8 @@ class AssistantDataSource extends BaseWizardDataSource
         $mopNames['cashNameEN'] = $config->get('POSPaymentMethodRenaming.cash.nameEN');
         $mopNames['paymentCardNameDE'] = $config->get('POSPaymentMethodRenaming.paymentCard.nameDE');
         $mopNames['paymentCardNameEN'] = $config->get('POSPaymentMethodRenaming.paymentCard.nameEN');
+        $mopNames['couponNameDE'] = $config->get('POSPaymentMethodRenaming.coupon.nameDE');
+        $mopNames['couponNameEN'] = $config->get('POSPaymentMethodRenaming.coupon.nameEN');
         $wizardData['default']['data'] = $mopNames;
         return $wizardData;
     }
@@ -75,7 +77,8 @@ class AssistantDataSource extends BaseWizardDataSource
         if(isset($options['default']) && isset($options['default']['data'])){
             $mopNames = $options['default']['data'];
             if (isset($mopNames['cashNameDE']) && isset($mopNames['cashNameEN'])
-                && isset($mopNames['paymentCardNameDE'])  && isset($mopNames['paymentCardNameEN']) ) {
+                && isset($mopNames['paymentCardNameDE'])  && isset($mopNames['paymentCardNameEN'])
+                && isset($mopNames['couponNameDE'])  && isset($mopNames['couponNameEN']) ) {
                 return true;
             }
         }

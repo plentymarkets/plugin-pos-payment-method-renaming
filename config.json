@@ -30,6 +30,21 @@
           "label": "Config.paymentCardNameEN"
         }
       }
+    },
+    "Config.CouponNames": {
+      "label": "Config.CouponNames",
+      "formFields": {
+        "coupon.nameDE": {
+          "type": "inputText",
+          "required": true,
+          "label": "Config.couponNameDE"
+        },
+        "coupon.nameEN": {
+          "type": "inputText",
+          "required": true,
+          "label": "Config.couponNameEN"
+        }
+      }
     }
   }
 }
