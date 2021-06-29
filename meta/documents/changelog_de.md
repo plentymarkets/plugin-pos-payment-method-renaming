@@ -2,7 +2,7 @@
 
 ## v1.0.4 (2021-06-29)
 ### Hinzugefügt
-- Zahlungsart Gutschein 
+- Zahlungsart Gutschein (ID 1170)
 
 ## v1.0.3 (2020-07-28)
 ### Geändert
