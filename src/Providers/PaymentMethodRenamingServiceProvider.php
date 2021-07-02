@@ -5,6 +5,7 @@ namespace POSPaymentMethodRenaming\Providers;
 use POSPaymentMethodRenaming\Assistants\ConfigurationAssistant;
 use POSPaymentMethodRenaming\Methods\PaymentCardPaymentMethod;
 use POSPaymentMethodRenaming\Methods\CashPaymentMethod;
+use POSPaymentMethodRenaming\Methods\CouponPaymentMethod;
 use Plenty\Modules\Payment\Method\Contracts\PaymentMethodContainer;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Modules\Wizard\Contracts\WizardContainerContract as AssistantContainerContract;
@@ -30,6 +31,7 @@ class PaymentMethodRenamingServiceProvider extends ServiceProvider
     {
         $payContainer->register('plenty::CASH', CashPaymentMethod::class,[]);
         $payContainer->register('plenty::EC', PaymentCardPaymentMethod::class,[]);
+        $payContainer->register('plenty::COUPON', CouponPaymentMethod::class,[]);
 
         // Register the assistant
         /** @var AssistantContainerContract $assistantContainer */

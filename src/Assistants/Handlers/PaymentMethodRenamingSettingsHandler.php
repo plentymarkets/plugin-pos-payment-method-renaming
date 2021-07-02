@@ -37,6 +37,8 @@ class PaymentMethodRenamingSettingsHandler implements WizardSettingsHandler
                 $configuration[] = ['key' => 'cash.nameEN', 'value' => $data['cashNameEN']];
                 $configuration[] = ['key' => 'paymentCard.nameDE', 'value' => $data['paymentCardNameDE']];
                 $configuration[] = ['key' => 'paymentCard.nameEN', 'value' => $data['paymentCardNameEN']];
+                $configuration[] = ['key' => 'coupon.nameDE', 'value' => $data['couponNameDE']];
+                $configuration[] = ['key' => 'coupon.nameEN', 'value' => $data['couponNameEN']];
 
                 $configRepo->saveConfiguration($paymentMethodRenamingPlugin->id, $configuration);
             }

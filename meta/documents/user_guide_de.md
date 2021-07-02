@@ -1,6 +1,6 @@
 # plentymarkets Plugin zur Umbenennung der plentyPOS Standardzahlungsarten
 
-Mit diesem Plugin kannst du individuelle Namen für die plentyPOS Standardzahlungsarten mit der ID 4 (Barzahlung) und der ID 11 (Kartenzahlung) vergeben.
+Mit diesem Plugin kannst du individuelle Namen für die plentyPOS Standardzahlungsarten mit der ID 4 (Barzahlung), der ID 11 (Kartenzahlung) und der ID 1700 (Gutschein) vergeben.
 
 <div class="alert alert-warning" role="alert">
    Verwendest du bereits das Plugin <a href="https://marketplace.plentymarkets.com/payuponpickup_4757" target="_blank">Barzahlung</a> für Ceres? Dann achte darauf, für das vorliegende Plugin eine niedrigere Position als für das Plugin Barzahlung zu vergeben, falls beide im selben Plugin-Set installiert sind.
