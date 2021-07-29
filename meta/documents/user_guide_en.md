@@ -1,4 +1,4 @@
-# plentymarkets Plugin for renaming plentyPOS default payment methods
+# plentymarkets Plugin for integrating and renaming plentyPOS default payment methods
 
 This plugin provides you with all necessary plentyPOS default payment methods by making them available in your plentymarkets back end:
 
@@ -23,7 +23,6 @@ The default payment methods can be renamed by using an assistant in the plentyma
 1. Go to **Setup » Assistants » Integration**.
 2. Open the assistant **plentyPOS payment methods**.
 3. Complete the assistant.
-
 
 ## Integrating default payment methods
 

@@ -1,4 +1,4 @@
-# plentymarkets Plugin zur Bereitstellung der plentyPOS Standardzahlungsarten
+# plentymarkets Plugin zur Bereitstellung und Umbenennung der plentyPOS Standardzahlungsarten
 
 Dieses Plugin stellt alle erforderlichen Standardzahlungsarten für die Verwendung von plentyPOS in deinem plentymarkets Backend bereit:
 
