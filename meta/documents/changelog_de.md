@@ -1,5 +1,9 @@
 # Versionshinweise für das plentyPOS Zahlungsarten Plugin
 
+#v1.0.6 (2021-07-30)
+### Geändert
+- Anpassungen im User Guide
+
 ## v1.0.5 (2021-07-29)
 ### Geändert
 - Anpassungen im User Guide

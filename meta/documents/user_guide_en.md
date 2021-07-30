@@ -20,9 +20,10 @@ The default payment methods can be renamed by using an assistant in the plentyma
 
 #### Renaming default payment methods:
 
-1. Go to **Setup » Assistants » Integration**.
-2. Open the assistant **plentyPOS payment methods**.
-3. Complete the assistant.
+1. Go to **Setup » Assistants » Plugins**.
+2. Select the plugin set in which you have installed the plugin.
+3. Open the assistant **plentyPOS payment methods**.
+4. Complete the assistant.
 
 ## Integrating default payment methods
 
