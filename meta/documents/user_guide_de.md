@@ -6,7 +6,7 @@ Dieses Plugin stellt alle erforderlichen Standardzahlungsarten für die Verwendu
 * Kartenzahlung (ID 11)
 * Gutscheine (ID 1700)
 
-Zusaätzlich kannst du auf Wunsch individuelle Namen für die oben genannten plentyPOS Standardzahlungsarten vergeben.
+Zusätzlich kannst du auf Wunsch individuelle Namen für die oben genannten plentyPOS Standardzahlungsarten vergeben.
 
 <div class="alert alert-warning" role="alert">
    Verwendest du bereits das Plugin <a href="https://marketplace.plentymarkets.com/payuponpickup_4757" target="_blank">Barzahlung</a> für Ceres? Dann achte darauf, für das vorliegende Plugin eine niedrigere Position als für das Plugin Barzahlung zu vergeben, falls beide im selben Plugin-Set installiert sind.
@@ -20,9 +20,10 @@ Die Umbenennung der plentyPOS Standardzahlungsarten nimmst du mithilfe eines Ass
 
 #### Standardzahlungsarten umbenennen:
 
-1. Öffne das Menü **Einrichtung » Assistenten » Integration**.
-2. Öffne den Assistenten **plentyPOS Zahlungsarten**.
-3. Schließe den Assistenten vollständig ab.
+1. Öffne das Menü **Einrichtung » Assistenten » Plugins**.
+2. Wähle das Plugin-Set, in dem du das Plugin installiert hast.
+3. Öffne den Assistenten **plentyPOS Zahlungsarten**.
+4. Schließe den Assistenten vollständig ab.
 
 ## Standardzahlungsarten bereitstellen
 
