@@ -9,6 +9,10 @@ Dieses Plugin stellt alle erforderlichen Standardzahlungsarten für die Verwendu
 Zusätzlich kannst du auf Wunsch individuelle Namen für die oben genannten plentyPOS Standardzahlungsarten vergeben.
 
 <div class="alert alert-warning" role="alert">
+   Das vorliegende Plugin muss in dem Plugin-Set installiert und aktiviert werden, das mit dem Hauptmandanten verknüpft ist.
+</div>
+
+<div class="alert alert-warning" role="alert">
    Verwendest du bereits das Plugin <a href="https://marketplace.plentymarkets.com/payuponpickup_4757" target="_blank">Barzahlung</a> für Ceres? Dann achte darauf, für das vorliegende Plugin eine niedrigere Position als für das Plugin Barzahlung zu vergeben, falls beide im selben Plugin-Set installiert sind.
 </div>
 

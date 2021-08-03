@@ -9,6 +9,10 @@ This plugin provides you with all necessary plentyPOS default payment methods by
 In addition, you can customise the names of the plentyPOS default payment methods for plentyPOS.
 
 <div class="alert alert-warning" role="alert">
+   This plugin has to be installed and activated in the plugin set that is used for the main client.
+</div>
+
+<div class="alert alert-warning" role="alert">
    Are you already using the <a href="https://marketplace.plentymarkets.com/en/payuponpickup_4757" target="_blank">Pay upon pickup</a> plugin for Ceres? In case both plugins are installed in the same plugin set, you have to assign a lower position for the present plugin than for the Pay upon pickup plugin.
 </div>
 
