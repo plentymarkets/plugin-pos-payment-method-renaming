@@ -8,7 +8,7 @@ Dieses Plugin stellt alle erforderlichen Standardzahlungsarten für die Verwendu
 
 Zusätzlich kannst du auf Wunsch individuelle Namen für die oben genannten plentyPOS Standardzahlungsarten vergeben.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-success" role="alert">
    Das vorliegende Plugin muss in dem Plugin-Set installiert und aktiviert werden, das mit dem Hauptmandanten verknüpft ist.
 </div>
 

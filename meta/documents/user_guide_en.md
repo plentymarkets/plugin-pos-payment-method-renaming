@@ -8,7 +8,7 @@ This plugin provides you with all necessary plentyPOS default payment methods by
 
 In addition, you can customise the names of the plentyPOS default payment methods for plentyPOS.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-success" role="alert">
    This plugin has to be installed and activated in the plugin set that is used for the main client.
 </div>
 
