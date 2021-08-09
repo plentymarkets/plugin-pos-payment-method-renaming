@@ -2,7 +2,6 @@
   "name"                  : "POSPaymentMethodRenaming",
   "author"                : "plentysystems AG",
   "version"               : "1.0.8",
-  "license"               : "AGPL-3.0",
   "marketplaceName"       : {"en":"plentyPOS payment methods", "de":"plentyPOS Zahlungsarten"},
   "description"           : "Plugin to integrate and rename the plentyPOS default payment methods",
   "namespace"             : "POSPaymentMethodRenaming",
