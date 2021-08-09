@@ -1,6 +1,6 @@
 # Release Notes for the plentyPOS payment methods Plugin
 
-##v1.0.7 (2021-08-09)
+##v1.0.8 (2021-08-09)
 ### Changed
 - plentyMarketplace category
 
