@@ -1,6 +1,6 @@
-# plentymarkets Plugin for integrating and renaming plentyPOS default payment methods
+# PlentyONE Plugin for integrating and renaming plentyPOS default payment methods
 
-This plugin provides you with all necessary plentyPOS default payment methods by making them available in your plentymarkets back end:
+This plugin provides you with all necessary plentyPOS default payment methods by making them available in your PlentyONE back end:
 
 * Cash payment (ID 4)
 * Card payment (ID 11)
@@ -18,9 +18,9 @@ In addition, you can customise the names of the plentyPOS default payment method
 
 ## Renaming default payment methods
 
-Do you wish to assign customised names to the default payment methods? The changed name will appear in the plentymarkets back end, on plentyPOS receipts, in the X and Z reports and in all exports generated in plentyPOS.
+Do you wish to assign customised names to the default payment methods? The changed name will appear in the PlentyONE back end, on plentyPOS receipts, in the X and Z reports and in all exports generated in plentyPOS.
 
-The default payment methods can be renamed by using an assistant in the plentymarkets back end. The assistant leads you through the necessary settings. Proceed as described below.
+The default payment methods can be renamed by using an assistant in the PlentyONE back end. The assistant leads you through the necessary settings. Proceed as described below.
 
 #### Renaming default payment methods:
 
@@ -31,7 +31,7 @@ The default payment methods can be renamed by using an assistant in the plentyma
 
 ## Integrating default payment methods
 
-The necessary default payment methods are automatically available and activated in your plentymarkets backend after you have completed the assistant. You can then see these default payment methods in the **Setup » Orders » Payment » Payment methods** menu.
+The necessary default payment methods are automatically available and activated in your PlentyONE back end after you have completed the assistant. You can then see these default payment methods in the **Setup » Orders » Payment » Payment methods** menu.
 
 ## License
 
