@@ -1,12 +1,12 @@
-# PlentyONE Plugin for integrating and renaming plentyPOS default payment methods
+# PlentyONE Plugin for integrating and renaming POS default payment methods
 
-This plugin provides you with all necessary plentyPOS default payment methods by making them available in your PlentyONE back end:
+This plugin provides you with all necessary POS default payment methods by making them available in your PlentyONE back end:
 
 * Cash payment (ID 4)
 * Card payment (ID 11)
 * Coupons (ID 1700)
 
-In addition, you can customise the names of the plentyPOS default payment methods for plentyPOS.
+In addition, you can customise the names of the POS default payment methods for PlentyONE POS.
 
 <div class="alert alert-success" role="alert">
    This plugin has to be installed and activated in the plugin set that is used for the main client.
@@ -18,7 +18,7 @@ In addition, you can customise the names of the plentyPOS default payment method
 
 ## Renaming default payment methods
 
-Do you wish to assign customised names to the default payment methods? The changed name will appear in the PlentyONE back end, on plentyPOS receipts, in the X and Z reports and in all exports generated in plentyPOS.
+Do you wish to assign customised names to the default payment methods? The changed name will appear in the PlentyONE back end, on POS receipts, in the X and Z reports and in all exports generated in PlentyONE POS.
 
 The default payment methods can be renamed by using an assistant in the PlentyONE back end. The assistant leads you through the necessary settings. Proceed as described below.
 
@@ -26,7 +26,7 @@ The default payment methods can be renamed by using an assistant in the PlentyON
 
 1. Go to **Setup » Assistants » Plugins**.
 2. Select the plugin set in which you have installed the plugin.
-3. Open the assistant **plentyPOS payment methods**.
+3. Open the assistant **POS payment methods**.
 4. Complete the assistant.
 
 ## Integrating default payment methods

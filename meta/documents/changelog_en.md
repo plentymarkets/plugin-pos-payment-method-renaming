@@ -1,4 +1,4 @@
-# Release Notes for the plentyPOS payment methods Plugin
+# Release Notes for the POS payment methods Plugin
 
 ##v1.0.9 (2025-03-03)
 ### Changed
